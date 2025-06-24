@@ -1,6 +1,5 @@
-# Master Backend With Express js
+# Features 
 
-- Project Setup
 - Authentication
 - Authorization
 - Caching
