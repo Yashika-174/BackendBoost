@@ -1,3 +1,47 @@
+# 📰 NewsHub API
+
+A full-featured backend API for publishing and consuming news articles. Designed with modern backend principles, it includes **Authentication**, **Authorization**, **Email Verification**, **Pagination**, **Redis Caching**, **Rate Limiting**, **Dockerized Redis**, and more.
+
+---
+
+## 🚀 Features
+
+- ✅ **User Authentication & Authorization** (JWT-based)
+- 📝 **CRUD News Management**
+- 🔍 **Advanced Search, Filter & Pagination**
+- 🔄 **Redis Caching for Performance**
+- 📧 **Email Notification via Nodemailer**
+- 📦 **Rate Limiting with Express**
+- 🧰 **Helmet & CORS for Security**
+- 🐳 **Dockerized Redis Integration**
+- 🔁 **Queue-ready structure for scalability**
+- 📁 **News Images Upload & Removal**
+
+---
+
+## 🧠 Core Backend Concepts Used
+
+### 🔐 Authentication & Authorization
+- Users must register/login to access protected routes.
+- JWT is used for token-based secure access.
+- Authorization logic restricts update/delete to only the **creator** of a news item.
+
+### 🛡️ CORS & Security (Helmet)
+- Configured CORS to handle cross-origin requests.
+- Used **Helmet** to add security headers and prevent common attacks (XSS, clickjacking).
+
+### ⚙️ Rate Limiting
+- Prevents abuse by limiting API calls based on **client IP address**.
+- Uses `express-rate-limit` to restrict requests per window (e.g. 100 requests per 15 mins).
+
+### ⚡ Redis Caching
+- **Boosts performance** by serving news from cache if data doesn't change frequently.
+- Integrated via **Dockerized Redis**.
+- Automatically **invalidates** cache after data mutation (add/delete).
+
+### 🔁 Pagination
+- Custom pagination using `page` and `limit` query.
+- Implemented with formula:
 - Helps avoid over-fetching, especially for mobile clients or slow networks.
 
 ### 📨 Email Sending with Nodemailer
