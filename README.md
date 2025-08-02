@@ -23,14 +23,14 @@ A robust News Management RESTful API built with **Node.js**, **Express**, and **
 
 ## 📁 Project Structure
 
-/controllers -> All route logic
-/middlewares -> Auth, cache, rate limit
-/routes -> Express routes
-/validations -> Schema validation
-/DB -> Prisma + Redis config
-/utils -> File/email helpers
-/transform -> Clean API responses
-/config -> Logger & mail config
+- /controllers -> All route logic
+- /middlewares -> Auth, cache, rate limit
+- /routes -> Express routes
+- /validations -> Schema validation
+- /DB -> Prisma + Redis config
+- /utils -> File/email helpers
+- /transform -> Clean API responses
+- /config -> Logger & mail config
 
 --
 
